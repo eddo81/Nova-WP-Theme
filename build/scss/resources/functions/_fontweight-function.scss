@@ -1,0 +1,25 @@
+/**
+ * _fontweight-function.scss
+ * =======================
+ *
+ */
+
+@function get_weight($weight) {
+  $weight-map: (
+    'thin': 100,
+    'extra light': 200,
+    'light': 300,
+    'normal': 400,
+    'medium': 500,
+    'semi bold': 600,
+    'bold': 700,
+    'extra bold': 800,
+    'black': 900
+  );
+
+  @if type-of($weight) == 'string' and map-has-key($weight-map, $weight) {
+    @return #{map-get($weight-map, $weight)};
+  } @else {
+    @error 'Invalid argument: `#{$weight}`. Please provide a vaild string value that matches a key in the `$weight-map`: `#{map-keys($weight-map)}`.';
+  }
+}

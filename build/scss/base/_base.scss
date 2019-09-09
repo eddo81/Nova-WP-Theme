@@ -1,0 +1,35 @@
+// Base
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+   overflow-x: hidden;
+   box-sizing: border-box;
+   font-family: $system;
+   font-size: 62.5%;
+   height: 100%;
+   text-rendering: optimizeLegibility;
+ }
+
+ body {
+   font-family: $font;
+   font-size: $font-size-base;
+   line-height: $baseline;
+   position: relative;
+   min-height: 100%;
+ }
+
+ img, svg, video {
+  height: auto;
+  max-width: 100%;
+}

@@ -1,0 +1,30 @@
+/**
+ * _headings-mixin.scss
+ * ====================
+ *
+ */
+
+@mixin generate-headings($headings, $class: false) {
+
+  @if(type-of($headings) != "list") {
+    @error "Invalid argument: `#{$headings}`. Please provide an argument of type 'list'.";
+  }
+
+  @if(type-of($class) != "bool") {
+    @error "Invalid argument: `#{$class}`. Please provide an argument of 'bool'.";
+  }
+
+  @for $i from 1 through length($headings) {
+    @if($i <= 6 and $class == false) {
+      h#{$i} {
+        font-size: nth($headings, $i);
+      }
+    }
+
+    @if($i<= 6 and $class == true) {
+      .h#{$i} {
+        font-size: nth($headings, $i);
+      }
+    }
+  }
+}

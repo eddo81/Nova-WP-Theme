@@ -1,0 +1,9 @@
+/**
+ * _truncate-placeholder.scss
+ * ==========================
+ *
+ */
+
+%truncate {
+  @include truncate();
+}

@@ -1,0 +1,162 @@
+/**
+ * _utilities.scss
+ * ===============
+ *
+ */
+
+.disabled {
+  @extend %disabled;
+}
+
+.smooth {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.f-none {
+  float: none;
+}
+
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+
+.clearfix {
+  @extend %clearfix;
+}
+
+.td-none {
+  text-decoration: none !important;
+}
+
+.ta-left {
+  text-align: left;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.ta-right {
+  text-align: right;
+}
+
+.truncate {
+  @extend %truncate;
+}
+
+.fs-small {
+  font-size: $font-size-sm;
+}
+
+.fs-base {
+  font-size: $font-size-md;
+}
+
+.fs-large {
+  font-size: $font-size-lg;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.none {
+  display: none;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.fw-light {
+  font-weight: get_weight('light');
+}
+
+.fw-normal {
+  font-weight: get_weight('normal');
+}
+
+.fw-medium {
+  font-weight: get_weight('medium');
+}
+
+.fw-semibold {
+  font-weight: get_weight('semi bold');
+}
+
+.fw-bold {
+  font-weight: get_weight('bold');
+}
+
+.fw-extrabold {
+  font-weight: get_weight('extra bold');
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.padding-none {
+  padding: 0;
+}
+
+.margin-none {
+  margin: 0;
+}
+
+.dont-break-out {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.full-height {
+  min-height: 100%;
+}
+
+@include generate-spacing-classes($spacing-sizes, "padding");
+@include generate-spacing-classes($spacing-sizes, "margin");
+@include generate-color-classes($theme-colors);

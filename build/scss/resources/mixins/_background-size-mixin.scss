@@ -1,0 +1,11 @@
+/**
+ * _background-size-mixin.scss
+ * ===========================
+ *
+ */
+
+@mixin background-size($background-size-variable) {
+  background-size: $background-size-variable;
+  background-repeat: no-repeat;
+  background-position: center;
+}

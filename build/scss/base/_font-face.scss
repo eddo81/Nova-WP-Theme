@@ -1,0 +1,29 @@
+/**
+ * _font-face.scss
+ * ===============
+ *
+ */
+
+@font-face {
+  font-family: $primary-font;
+  src: local('#{$primary-font}'), local('#{$primary-font}'),
+    url('~assets/fonts/#{$primary-font}/#{$primary-font}.woff2')
+      format('woff2'),
+    url('~assets/fonts/#{$primary-font}/#{$primary-font}.woff')
+      format('woff');
+  font-weight: get_weight('thin');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $primary-font;
+  src: local('#{$primary-font}-Bold'), local('#{$primary-font} Bold'),
+    url('~assets/fonts/#{$primary-font}/#{$primary-font}-Bold.woff2')
+      format('woff2'),
+    url('~assets/fonts/#{$primary-font}/#{$primary-font}-Bold.woff')
+      format('woff');
+  font-weight: get_weight('bold');
+  font-style: normal;
+  font-display: swap;
+}

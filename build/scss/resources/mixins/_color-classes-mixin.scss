@@ -1,0 +1,32 @@
+/**
+ * _color-classes-mixin.scss
+ * =========================
+ *
+ */
+
+@mixin generate-color-classes($colors) {
+
+  @if(type-of($colors) != "map") {
+    @error "Invalid argument: `#{$colors}`. Please provide an argument of type 'map' like so: ('theme': 10px, 'md': 20px, 'lg': 30px).";
+  }
+
+  @each $key, $val in $colors {
+
+    @if(type-of($key) != string) {
+      @error "Key: `#{$key}` in argument `#{$colors}` needs to be of type 'string'.";
+    }
+
+    @if(type-of($val) != color) {
+      @error "Value: `#{$val}` in argument `#{$colors}` needs to be of type 'color'.";
+    }
+
+    .text-#{$key} {
+      color: $val;
+      fill: $val;
+    }
+
+    .bg-#{$key} {
+      background-color: $val;
+    }
+  }
+}

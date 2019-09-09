@@ -1,0 +1,5 @@
+@mixin flex-basis($max-width: calc(100% / 1)) {
+	-ms-flex-preferred-size: $max-width;
+	flex-basis: $max-width;
+	max-width: $max-width;
+}

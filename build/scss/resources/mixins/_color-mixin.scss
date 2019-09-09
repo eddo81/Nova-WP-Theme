@@ -1,0 +1,4 @@
+@mixin color($color-variable) {
+  color: $color-variable;
+  fill: $color-variable;
+}

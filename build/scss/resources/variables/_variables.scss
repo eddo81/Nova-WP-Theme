@@ -1,0 +1,54 @@
+// _variables.scss
+
+// Baseline
+$font-size-base: 1.6rem !default;
+$font-size-headings: (4.7rem, 3.3rem, 2.7rem, 2.3rem, 1.9rem, $font-size-base);
+$font-size-sm: 1.3rem !default;
+$font-size-md: 1.5rem !default;
+$font-size-lg: 2rem !default;
+$baseline: 1.6 * $font-size-base;
+$grid-gap: 2rem;
+
+// Border radius
+$border-radius-sm: 0.6rem !default;
+$border-radius-lg: 100% !default;
+
+// Border width
+$border-width: 0.1rem !default;
+
+// Font names
+$primary-font: 'Helvetica';
+
+// Font stacks
+$font: $primary-font, 'Helvetica Neue', 'Segoe UI', 'Verdana',
+sans-serif !default;
+$code: 'Consolas', 'Monaco', 'Courier New', monospace !default;
+$system: 'system-ui', 'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu',
+  'Cantarell', 'Helvetica Neue', sans-serif !default;
+
+// Directions
+$directions: ('top', 'left', 'bottom', 'right');
+
+// Colors
+$theme-color: #002454;
+$accent-color: #488fa5;
+$light-accent-color: #96c2d0;
+$black-color: #000000;
+$hint-color: rgba($black-color, 0.7);
+$light-grey-color: #f0f1f3;
+$dark-grey-color: #cbcbcb;
+$white-color: #ffffff;
+
+$theme-colors: ("theme": $theme-color, "accent-light": $light-accent-color, "accent": $accent-color, "black": $black-color, "hint": $hint-color, "light-grey": $light-grey-color, "dark-grey": $dark-grey-color, "white": $white-color);
+
+$spacing-sizes: ('auto': auto, 'none': 0, 'xs': ($baseline / 4), 'sm': ($baseline / 2), 'md': $baseline, 'lg': ($baseline * 2));
+
+// Breakpoints
+$screen-xs: 0;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+$navbar-height-lg: 140px;
+$navbar-height-sm: 80px;

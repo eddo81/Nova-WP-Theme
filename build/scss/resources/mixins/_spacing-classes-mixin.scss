@@ -1,0 +1,32 @@
+/**
+ * _spacing-classes-mixin.scss
+ * ===========================
+ *
+ */
+
+$directions: ("top", "left", "bottom", "right");
+$attribute-list: ("padding", "margin");
+
+@mixin generate-spacing-classes($sizes, $attribute: "padding") {
+
+  @if(null == index($attribute-list, $attribute)) {
+    @error "Invalid argument: `#{$attribute}`. Please provide a value of either 'padding' or 'margin'.";
+  }
+
+  @if(type-of($sizes) != "map") {
+    @error "Invalid argument: `#{$sizes}`. Please provide an argument of type 'map' like so: ('sm': 10px, 'md': 20px, 'lg': 30px).";
+  }
+
+  @each $key, $val in $sizes {
+
+    @for $i from 1 through length($directions) {
+      .#{$attribute}-#{nth($directions, $i)}-#{$key} {
+        #{$attribute}-#{nth($directions, $i)}: $val;
+      }
+    }
+
+    .#{$attribute}-#{$key} {
+      #{$attribute}: $val;
+    }
+  }
+}

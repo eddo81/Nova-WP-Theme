@@ -1,0 +1,7 @@
+.link {
+  transition: get_duration("short") opacity cubic-bezier(get_easing(3));
+
+  &:hover, &:focus, &:active {
+    opacity: 0.7;
+  }
+}
